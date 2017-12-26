@@ -1,0 +1,8 @@
+<%
+if (@comment.user == nil)
+    @usr = "Anonim"
+else
+    @usr = @comment.user.email
+end
+%>
+$('#comments ul').prepend('<li><b><%=@usr%> </b><%=@comment.bdy%></li>');

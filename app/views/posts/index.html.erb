@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div id="upp"><a href="<%=new_post_path%>" class="btn btn-primary"><i class="glyphicon glyphicon-open"></i> New Post</a></div>
+
+    <% @posts.each do |post| %>
+        <%= link_to post, :class => "link-list" do %><%= image_tag post.image.url(:thumb), :class => "img-thumbnail img-list" %><% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

@@ -1,0 +1,9 @@
+<div style="text-align:center;margin-top:64px">
+    <h1><%= t("home1") %></h1>
+    <p><%= t("home2") %></p>
+    <% if user_signed_in? %>
+    <div id="upp" style="text-align:center;margin-top:32px;margin-bottom:128px"><a href="<%=new_post_path%>" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-open"></i> <%= t("upload") %></a></div>
+    <% else %>
+    <div id="upp" class="btn-group" style="text-align:center;margin-top:32px;margin-bottom:128px"><a href="<%=new_post_path%>" class="btn btn-primary btn-lg"><%= t("log_in") %></a><a href="<%=new_post_path%>" class="btn btn-primary btn-lg"><%= t("sign_up") %></a></div>
+    <% end %>
+</div>
